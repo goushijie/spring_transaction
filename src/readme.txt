@@ -1,0 +1,11 @@
+总结：
+  Spring将事务的管理方式分成两类：
+   *编程式的事务管理
+     *手动编写代码进行事务管理（很少使用）
+   *声明式的事务管理
+     *基于TransactionProxyFactoryBean的方式
+       *需要为每个进行事务管理的类，配置一个TransactionProxyFactoryBean进行增强。
+     *基于AspectJ的XML方式。（常用）
+       *结构清晰明了，易于阅读。一旦配置好了之后，类上不需要添加任何东西。
+     *基于注解。（常用）
+       *配置简单，需要在业务层的类上添加@Transactional的注解。
